@@ -170,7 +170,28 @@ Specialising in Software Engineering</li>
     <p>Copyright©️ Shehan. 2024 Allrights recieved.</p>
  </div>
 
+     <!-- Custom cursor element -->
+     <div class="cursor" id="custom-cursor"></div>
 
+     <script>
+         const cursor = document.getElementById('custom-cursor');
+
+         // Track mouse movement and update custom cursor position
+         window.addEventListener('mousemove', e => {
+             cursor.style.top = e.clientY + 'px';
+             cursor.style.left = e.clientX + 'px';
+         });
+
+         // Add click effect on mouse down
+         window.addEventListener('mousedown', () => {
+             cursor.classList.add('click');
+         });
+
+         // Remove click effect on mouse up
+         window.addEventListener('mouseup', () => {
+             cursor.classList.remove('click');
+         });
+     </script>
 
 <script>
 
