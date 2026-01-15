@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Portfolio Website</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <script src="https://kit.fontawesome.com/a34a19f3a0.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -25,8 +26,9 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>Software Engineer, Web developer</p>
-            <h1>Hi,I'm<span>Shehan</span><br>From Srilanka.</h1>
+            <h1>Hi,I'm <span>Shehan Dilhara</span><br></h1>
+            <p>A passionate Information & Technology undergraduate</p>
+            <a href="#about" class="btn">Hire Me</a>
         </div>
     </div>
 </div>
@@ -46,37 +48,38 @@
 <br>On this website, you will find a showcase of my projects, ranging from academic assignments to personal projects that highlight my abilities and creativity. My goal is to continue improving as a software engineer and collaborate on impactful projects that make a difference.</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
+    <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+    <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+    <p class="tab-links" onclick="opentab('education', event)">Education</p>
+</div>
 
                     <!--Skills-->
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Web Development</span><br>Building responsive, user-friendly websites with modern technologies.</li>
-                            <li><span>Full-Stack Development</span><br>Developing end-to-end web and mobile applications.</li>
-                            <li><span>UI/UX Design</span><br>Crafting intuitive and visually appealing web and mobile app interfaces</li>
-                            <li><span>Mobile App Development</span><br>Creating seamless Android and iOS applications.</li>
+                            <li><span>Full-Stack Development</span><br>Building end-to-end web applications using Java, Python, Node.js, React, and Spring Boot.</li>
+                            <li><span>Web Development</span><br>Creating responsive, user-friendly websites with modern frontend and backend technologies.</li>
+                            <li><span>Backend & API Development</span><br>Developing robust server-side logic, REST APIs, and database integrations.</li>
+                            <li><span>AI & Emerging Tech</span><br>Exploring artificial intelligence and digital electronics to develop innovative solutions.</li>
                         </ul>
                     </div>
 
                     <!--Expericence-->
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>2024 - Current</span><br>Experience</li>
-                            <li><span>2024 - Current</span><br>Experience</li>
-                            <li><span>2024 - Current</span><br>Experience</li>
+                            <li><span>Academic & Personal Projects</span><br>Developed real-world web applications as part of coursework and self-driven projects.</li>
+                            <li><span>Full-Stack Development Practice</span><br>Gained hands-on experience building frontend and backend features.</li>
+                            <li><span>Backend & API Development</span><br>Designed and implemented RESTful APIs, handled server-side logic, and worked with databases.</li>
+                            <li><span>Continuous Learning & Exploration</span><br>Actively learning new technologies, with growing interests in AI and emerging tech concepts.</li>
                         </ul>
                     </div>
 
                     <!--Education-->
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2024</span><br>BSc(Hons) in Information Technology
-Specialising in Software Engineering</li>
-                            <li><span>2024</span><br>sd.</li>
-                            <li><span>2024</span><br>sd</li>
+                            <li><span>Information & Technology Undergraduate</span><br>Currently pursuing a degree with a focus on software development, programming fundamentals, and modern web technologies.</li>
+                            <li><span>Academic Learning & Practical Skills</span><br>Experience through coursework and projects.</li>
+                            <li><span>Technical Skill Development</span><br>Building proficiency in Java, Python, JavaScript, React, Node.js, and Spring Boot.</li>
+                            <li><span>Exploration of Emerging Technologies</span><br>Developing an interest in AI and digital electronics through self-study and projects.</li>
                         </ul>
                     </div>
             </div>
@@ -91,19 +94,19 @@ Specialising in Software Engineering</li>
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Web Design</h2>
-                <p>Dbnhvoushnovihre vjfnvn</p>
+            
                 <a href="#">Learn more</a>
             </div>
             <div>
                 <i class="fa-solid fa-crop"></i>
                 <h2>UI/UX Design</h2>
-                <p>Dbnhvoushnovihre vjfnvn</p>
+               
                 <a href="#">Learn more</a>
             </div>
             <div>
                 <i class="fa-brands fa-app-store"></i>
                 <h2>App Development and Design</h2>
-                <p>Dbnhvoushnovihre vjfnvn</p>
+                
                 <a href="#">Learn more</a>
             </div>
         </div>
@@ -144,16 +147,16 @@ Specialising in Software Engineering</li>
     <div class="container">
         <div class="row">
             <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-regular fa-paper-plane"></i> dshehan588@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> 078-7689821</p>
+                <h1 class="sub-title">Reach out!</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>dshehan588@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+94787689821</p>
                 <div class="social-icons">
                     <a href="https://web.facebook.com/profile.php?id=100076118350001"><i class="fa-brands fa-facebook"></i></a>
                     <a href=""><i class="fa-brands fa-twitter-square"></i></a>
                     <a href=""><i class="fa-brands fa-instagram"></i></a>
                     <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="images/CV.pdf" download class="btn btn2">Download Cv</a>                               
+                <a href="images/CV.pdf" download class="btn btn2">Find my resume here</a>                               
             </div>           
             <div class="contact-right">
                 <form>
@@ -167,8 +170,8 @@ Specialising in Software Engineering</li>
     </div>
  </div>
  <div class="copyright">
-    <p>Copyright©️ Shehan. 2024 Allrights recieved.</p>
- </div>
+    <p>© 2026 Shehan | Let’s build something amazing.</p>
+</div>
 
      <!-- Custom cursor element -->
      <div class="cursor" id="custom-cursor"></div>
@@ -195,19 +198,29 @@ Specialising in Software Engineering</li>
 
 <script>
 
-   var tablinks = document.getElementsByClassName("tab-links");
-   var tabcontents = document.getElementsByClassName("tab-contents");
+   var tablinks = document.querySelectorAll(".tab-links");
+   var tabcontents = document.querySelectorAll(".tab-contents");
 
-   function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-   }
+   tablinks.forEach(tablink => {
+       tablink.addEventListener("click", function (event) {
+           opentab(this.getAttribute("onclick").split("'")[1], event);
+       });
+   });
+
+   function opentab(tabname, event) {
+    // Remove active-link class from all tab links
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    // Remove active-tab class from all tab contents
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    // Add active-link class to the clicked tab link
+    event.currentTarget.classList.add("active-link");
+    // Add active-tab class to the corresponding tab content
+    document.getElementById(tabname).classList.add("active-tab");
+}
 </script>
 
 <script>
@@ -219,6 +232,10 @@ Specialising in Software Engineering</li>
     }
     function closemenu(){
         sidemenu.style.right = "-200px";
+    }
+    function toggleMenu() {
+        const sidemenu = document.getElementById("sidemenu");
+        sidemenu.style.right = sidemenu.style.right === "0px" ? "-200px" : "0";
     }
 
 </script>

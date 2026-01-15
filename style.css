@@ -130,6 +130,18 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+.active-link {
+    font-weight: bold;
+    color: #b70505;
+}
+
+.active-tab {
+    display: block;
+}
+
+.tab-contents {
+    display: none;
+}
 
 /*---------------services-------------------*/
 #services{
