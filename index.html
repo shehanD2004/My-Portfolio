@@ -205,15 +205,16 @@
                 </div>
                 <a href="images/CV.pdf" download class="btn btn2">Find my resume here</a>                               
             </div>           
-            <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Messsage" rows="6" placeholder="Your Messsage"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg">Submit Successful</span>
-            </div>
+<div class="contact-right">
+    <form id="contactForm">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn2">Submit</button>
+    </form>
+    <span id="msg"></span>
+</div>
+
     </div>
  </div>
  <div class="copyright">
@@ -296,6 +297,25 @@ setInterval(() => {
   currentIndex = (currentIndex + 1) % texts.length;
   texts[currentIndex].classList.add("active");
 }, 3000);
+</script>
+
+<script>
+    const form = document.getElementById("contactForm");
+    const msg = document.getElementById("msg");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        msg.style.display = "block";
+        msg.textContent = "Submit Successful";
+
+        form.reset();
+
+        // Hide message after 3 seconds
+        setTimeout(() => {
+            msg.style.display = "none";
+        }, 3000);
+    });
 </script>
 
     </body>
