@@ -339,6 +339,14 @@ form btn2{
     font-weight: 300;
     margin-top: 20px;
 }
+
+#msg {
+    color: green;
+    margin-top: 10px;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
 /*------------------css for small screen-------------*/
 
 nav .fa-bars, nav .fa-circle-xmark {
