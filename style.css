@@ -67,6 +67,23 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color: #b70505;
 }
+
+.changing-text {
+  position: relative;
+  height: 25px;
+  font-size: 18px;
+}
+
+.text {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.text.active {
+  opacity: 1;
+}
+
 /*--------about----------*/
 #about{
     padding: 80px 0;
@@ -182,6 +199,19 @@ nav ul li a:hover::after{
     background: #ff101f;
     transform: translateY(-10px);
 }
+.services-list div p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Improve hover effect */
+.services-list div:hover p,
+.services-list div:hover a {
+    color: #fff;
+}
+
 /* -----------portfolio----------*/
 #portfolio{
     padding: 50px 0;
