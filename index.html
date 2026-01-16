@@ -26,9 +26,15 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <h1>Hi,I'm <span>Shehan Dilhara</span><br></h1>
-            <p>A passionate Information & Technology undergraduate</p>
-            <a href="#about" class="btn">Hire Me</a>
+            <h1>Hi, I'm <span>Shehan Dilhara</span><br></h1>
+            <p class="changing-text">
+  <span class="text active">Passionate Information & Technology undergraduate</span>
+  <span class="text">Full Stack Web Developer</span>
+  <span class="text">Software Engineer</span>
+  <span class="text"></span>
+</p>
+
+            <a href="#contact" class="btn">LET'S TALK</a>
         </div>
     </div>
 </div>
@@ -43,7 +49,7 @@
                 <h1 class="sub-title">About Me</h1>
                 <p>I'm <b>Shehan Dilhara</b>, a passionate and driven Software Engineering student with a keen interest in solving real-world problems through technology. I am currently pursuing my degree in Software Engineering at Sri Lanka Institute of Information and technology , where I have developed a strong foundation in programming, software development, and problem-solving. <br>
 
-<br>My technical skills include <b>Java, C++, Python, Java Script, React, CSS, HTML</b> and I enjoy working on both front-end and back-end development projects. I am particularly interested in Software Development, Web Development, Mobile App Development, AI, etc.And I am always eager to learn new tools and techniques to enhance my skills.<br>
+<br>My technical skills include <b>Java, C++, Python, Java Script, React, CSS, HTML</b> and I enjoy working on both front-end and back-end development projects. I am particularly interested in Software Development, Web Development, Mobile App Development, AI, etc. And I am always eager to learn new tools and techniques to enhance my skills.<br>
 
 <br>On this website, you will find a showcase of my projects, ranging from academic assignments to personal projects that highlight my abilities and creativity. My goal is to continue improving as a software engineer and collaborate on impactful projects that make a difference.</p>
 
@@ -76,7 +82,7 @@
                     <!--Education-->
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Information & Technology Undergraduate</span><br>Currently pursuing a degree with a focus on software development, programming fundamentals, and modern web technologies.</li>
+                            <li><span>Information & Technology Undergraduate</span><br>Currently pursuing a degree with a focus on software development, programming, and modern web technologies.</li>
                             <li><span>Academic Learning & Practical Skills</span><br>Experience through coursework and projects.</li>
                             <li><span>Technical Skill Development</span><br>Building proficiency in Java, Python, JavaScript, React, Node.js, and Spring Boot.</li>
                             <li><span>Exploration of Emerging Technologies</span><br>Developing an interest in AI and digital electronics through self-study and projects.</li>
@@ -87,59 +93,101 @@
     </div>
 </div>
 <!-- ----------------services-------------- -->
- <div id="services">
+<div id="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
-            <div>
+
+            <div class="service-card">
                 <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-            
-                <a href="#">Learn more</a>
+                <h2>Web Development</h2>
+                <p>
+                    I create fast, responsive, and SEO-friendly websites that help 
+                    businesses attract visitors, build trust, and convert them into customers.
+                </p>
             </div>
-            <div>
+
+            <div class="service-card">
                 <i class="fa-solid fa-crop"></i>
-                <h2>UI/UX Design</h2>
-               
-                <a href="#">Learn more</a>
+                <h2>UI / UX Design</h2>
+                <p>
+                    I design intuitive and visually appealing user interfaces that 
+                    improve user experience, increase engagement, and keep visitors coming back.
+                </p>
             </div>
-            <div>
+
+            <div class="service-card">
                 <i class="fa-brands fa-app-store"></i>
-                <h2>App Development and Design</h2>
-                
-                <a href="#">Learn more</a>
+                <h2>App Development</h2>
+                <p>
+                    I develop scalable and high-performance web and mobile applications 
+                    that solve real problems and grow with your business.
+                </p>
             </div>
+
         </div>
     </div>
- </div>
+</div>
+
  <!-- ---------------portfolio------------- -->
 <div id="portfolio">
   <div class="container">
-    <h1 class="sub-title">My Work</h1>
+    <h1 class="sub-title">My Recently Projects</h1>
     <div class="work-list">
         <div class="work">
-            <img src="images/mWork1.jpg" alt="Work List">
+            <img src="images/rag-personal-assistant.jpg" alt="Work List">
             <div class="layer">
-               <h3>Social Media App</h3> 
-               <p>The app connects you to the talented people around the world.Download it from play store.</p>
+               <h3>RAG Personal Assistant</h3> 
+               <p>A lightweight Retrieval-Augmented Generation system that allows users to upload PDFs,
+                 index content using embeddings, and ask natural-language questions with accurate, context-aware responses.</p>
+                <a href="https://github.com/shehanD2004/rag-personal-assistant"
+           class="github-link"
+           target="_blank">
+           <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
             </div>
         </div>
         <div class="work">
-            <img src="images/mWork2.jpg" alt="Work List">
+            <img src="images/system-health-monitor.jpg" alt="Work List">
             <div class="layer">
-                <h3>Music App</h3> 
-                <p>The app connects you to the talented people around the world.Download it from play store.</p>
+                <h3>System Health Monitor</h3> 
+                <p>A Python-based system monitoring tool that tracks CPU, memory, and disk usage,
+                     generating timestamped alerts and logs when resource thresholds are exceeded.</p>
+                <a href="https://github.com/shehanD2004/system-health-monitor"
+           class="github-link"
+           target="_blank">
+           <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
              </div>
         </div>
         <div class="work">
             <img src="images/mWork3.jpg" alt="Work List">
             <div class="layer">
-                <h3>Shopping App</h3> 
-                <p>The app connects you to the talented people around the world.Download it from play store.</p>
+                <h3>YouTube Transcript Extractor</h3> 
+                <p>A tool that extracts and processes YouTube video transcripts, 
+                    enabling easy content analysis, summarization, and text-based searching</p>
+                <a href="https://github.com/shehanD2004/yt-transcript-extractor"
+           class="github-link"
+           target="_blank">
+           <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
+             </div>
+        </div>
+              <div class="work">
+            <img src="images/mWork3.jpg" alt="Work List">
+            <div class="layer">
+                <h3>Web-Based Stock Management System</h3> 
+                <p>A web-based inventory management system designed to track stock levels, manage products,
+                     and streamline inventory operations with a user-friendly interface.</p>
+                <a href="https://github.com/shehanD2004/StockManagementSystem"
+           class="github-link"
+           target="_blank">
+           <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
              </div>
         </div>
     </div>
-    <a href="#" class="btn">See more</a>
+
   </div>  
 </div>
 <!-- ---------------contact------------- -->
@@ -147,7 +195,7 @@
     <div class="container">
         <div class="row">
             <div class="contact-left">
-                <h1 class="sub-title">Reach out!</h1>
+                <h1 class="sub-title">Let's Work Together</h1>
                 <p><i class="fa-regular fa-paper-plane"></i>dshehan588@gmail.com</p>
                 <div class="social-icons">
                     <a href="https://web.facebook.com/profile.php?id=100076118350001"><i class="fa-brands fa-facebook"></i></a>
@@ -236,7 +284,18 @@
         const sidemenu = document.getElementById("sidemenu");
         sidemenu.style.right = sidemenu.style.right === "0px" ? "-200px" : "0";
     }
+    
+</script>
 
+<script>
+const texts = document.querySelectorAll(".text");
+let currentIndex = 0;
+
+setInterval(() => {
+  texts[currentIndex].classList.remove("active");
+  currentIndex = (currentIndex + 1) % texts.length;
+  texts[currentIndex].classList.add("active");
+}, 3000);
 </script>
 
     </body>
