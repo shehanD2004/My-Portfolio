@@ -85,9 +85,9 @@ nav ul li a:hover::after{
 }
 
 /*--------about----------*/
-#about{
-    padding: 80px 0;
-    color: #ababab;
+#about p, .work p{
+    font-size: 16px;
+    line-height: 1.8;
 }
 .row{
     display: flex;
@@ -273,7 +273,7 @@ nav ul li a:hover::after{
     transition: background 0.5s;
 }
 .btn:hover{
-    background: #ff0101;
+    background: linear-gradient(45deg, #ee0606, #ef0000);
 }
 /* Fire glow container */
 .work {
