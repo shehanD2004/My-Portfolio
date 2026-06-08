@@ -376,11 +376,15 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 6px;
 }
-form btn2{
+form .btn2{
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+    background: #ff0101;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
 }
 .copyright{
     width: 100%;

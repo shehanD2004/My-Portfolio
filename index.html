@@ -206,13 +206,14 @@
                 <a href="images/Shehan_Dilhara_CV.pdf" download class="btn btn2">Find my resume here</a>                               
             </div>           
 <div class="contact-right">
-    <form id="contactForm">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn btn2">Submit</button>
-    </form>
-    <span id="msg"></span>
+<form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="title" placeholder="Subject" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn2">Send</button>
+</form>
+<p id="msg" style="display:none;"></p>
 </div>
 
     </div>
@@ -299,24 +300,42 @@ setInterval(() => {
 }, 3000);
 </script>
 
+<!--EmailJS Intergration-->
 <script>
-    const form = document.getElementById("contactForm");
-    const msg = document.getElementById("msg");
+const form = document.getElementById("contactForm");
+const msg = document.getElementById("msg");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
+    emailjs.sendForm(
+        "service_i6sydb9",
+        "template_a0ylndi",
+        form
+    )
+    .then(() => {
         msg.style.display = "block";
-        msg.textContent = "Submit Successful";
-
+        msg.textContent = "Message Sent Successfully!";
         form.reset();
 
-        // Hide message after 3 seconds
         setTimeout(() => {
             msg.style.display = "none";
         }, 3000);
+    })
+    .catch((error) => {
+        msg.style.display = "block";
+        msg.textContent = "Failed to send message.";
+
+        console.error("EmailJS Error:", error);
+        alert(JSON.stringify(error));
     });
+});
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    emailjs.init("fRL0cV6W0rEWgm6kS");
+</script>
     </body>
 </html>
