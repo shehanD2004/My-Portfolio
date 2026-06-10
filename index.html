@@ -10,6 +10,14 @@
         <script src="https://kit.fontawesome.com/a34a19f3a0.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div id="splash">
+            <div class="splash-content">
+                <h1 class="logo">Shehan Dilhara</h1>
+                <p class="tagline">Portfolio</p>
+            </div>
+        </div>
+
+        <div id="app" class="hidden">
 <div id="header">
     <div class="container">
         <nav>
@@ -199,9 +207,9 @@
                 <p><i class="fa-regular fa-paper-plane"></i>dshehan588@gmail.com</p>
                 <div class="social-icons">
                     <a href="https://web.facebook.com/profile.php?id=100076118350001"><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/ShehanDilhara"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/shehan_dilhara_"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/shehan-dilhara"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <a href="images/Shehan_Dilhara_CV.pdf" download class="btn btn2">Find my resume here</a>                               
             </div>           
@@ -337,5 +345,29 @@ form.addEventListener("submit", function(e) {
 <script>
     emailjs.init("fRL0cV6W0rEWgm6kS");
 </script>
-    </body>
+
+<script>
+  window.addEventListener("load", () => {
+    const splash = document.getElementById("splash");
+    const app = document.getElementById("app");
+
+    // stage 1: hold splash briefly (feels premium, not instant)
+    setTimeout(() => {
+      splash.classList.add("hide");
+
+      // stage 2: reveal main app slightly after animation starts
+      setTimeout(() => {
+        app.classList.remove("hidden");
+      }, 1000);
+
+      // stage 3: remove splash completely
+      setTimeout(() => {
+        splash.remove();
+      }, 1500);
+
+    }, 1800); // minimum “brand moment” duration
+  });
+</script>
+    </div>
+    </body>       
 </html>
