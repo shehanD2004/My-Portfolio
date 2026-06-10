@@ -248,8 +248,8 @@ To customize, search and replace color values in `style.css`:
 
 ### Get in Touch
 
-- 📧 **Email:** [Your email here]
-- 💼 **LinkedIn:** [LinkedIn profile URL]
+- 📧 **Email:** [Gmail](dshehan588@gmail.com)
+- 💼 **LinkedIn:** [LinkedIn profile URL](https://www.linkedin.com/in/shehan-dilhara)
 - 🐙 **GitHub:** [github.com/shehanD2004](https://github.com/shehanD2004)
 - 🌐 **Portfolio:** [This website]
 
@@ -305,7 +305,6 @@ To customize, search and replace color values in `style.css`:
 
 - [ ] Dark/Light mode toggle
 - [ ] Add blog or articles section
-- [ ] Contact form with email integration
 - [ ] Search functionality for projects
 - [ ] Testimonials/recommendations section
 - [ ] Integration with external portfolio APIs
