@@ -251,7 +251,7 @@ To customize, search and replace color values in `style.css`:
 - 📧 **Email:** [Gmail](dshehan588@gmail.com)
 - 💼 **LinkedIn:** [LinkedIn profile URL](https://www.linkedin.com/in/shehan-dilhara)
 - 🐙 **GitHub:** [github.com/shehanD2004](https://github.com/shehanD2004)
-- 🌐 **Portfolio:** [This website]
+- 🌐 **Portfolio:** [This website](https://shehand2004.github.io/My-Portfolio/)
 
 ### How to Reach Out
 - Click the **"LET'S TALK"** button in the header
