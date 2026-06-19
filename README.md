@@ -315,7 +315,7 @@ To customize, search and replace color values in `style.css`:
 
 ## License
 
-Not specified in source. Consider adding an open-source license (MIT, Apache 2.0) if sharing.
+MIT
 
 ---
 
