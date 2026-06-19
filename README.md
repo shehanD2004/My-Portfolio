@@ -143,23 +143,6 @@ My-Portfolio/
 
 ---
 
-## Screenshots / Preview
-
-### Desktop View
-- **Hero Section** – Full-screen header with background image and animated text
-- **About Section** – Two-column layout (profile image + bio + tabs)
-- **Services** – 3-column grid layout with service cards
-- **Portfolio** – 2×2 grid or responsive layout of project cards
-
-### Mobile View
-- **Responsive Breakpoints** – Stack to single column on smaller screens
-- **Mobile Menu** – Hamburger toggle with slide-out navigation
-- **Touch-Friendly** – Larger tap targets, optimized spacing
-
-*For actual screenshots, add images to this section after deploying*
-
----
-
 ## Customization
 
 ### Content Changes
