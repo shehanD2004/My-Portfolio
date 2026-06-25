@@ -236,7 +236,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff0101);
+    background: linear-gradient(rgba(0,0,0,0.6), #000000);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -292,11 +292,11 @@ nav ul li a:hover::after{
     border-radius: 12px;
     background: linear-gradient(
         45deg,
-        #ffae00,
-        #ff6a00,
-        #ffd700,
-        #ff4500,
-        #ffae00
+        #00b7ff,
+        #026479,
+        #00ffee,
+        #3b17f0,
+        #0265f8
     );
     background-size: 300% 300%;
     z-index: -1;
