@@ -221,7 +221,7 @@
     <textarea name="message" placeholder="Your Message" required></textarea>
     <button type="submit" class="btn2">Send</button>
 </form>
-<p id="msg" style="display:none;"></p>
+<div id="msg" class="toast" aria-live="polite"></div>
 </div>
 
     </div>
@@ -313,30 +313,28 @@ setInterval(() => {
 const form = document.getElementById("contactForm");
 const msg = document.getElementById("msg");
 
+function showToast(message, variant = "success") {
+    msg.textContent = message;
+    msg.className = `toast ${variant} show`;
+
+    clearTimeout(msg.hideTimer);
+    msg.hideTimer = setTimeout(() => {
+        msg.classList.remove("show");
+    }, 3000);
+}
+
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    emailjs.sendForm(
-        "service_i6sydb9",
-        "template_a0ylndi",
-        form
-    )
-    .then(() => {
-        msg.style.display = "block";
-        msg.textContent = "Message Sent Successfully!";
-        form.reset();
-
-        setTimeout(() => {
-            msg.style.display = "none";
-        }, 3000);
-    })
-    .catch((error) => {
-        msg.style.display = "block";
-        msg.textContent = "Failed to send message.";
-
-        console.error("EmailJS Error:", error);
-        alert(JSON.stringify(error));
-    });
+    emailjs.sendForm("service_i6sydb9", "template_a0ylndi", form)
+        .then(() => {
+            showToast("Message sent successfully!", "success");
+            form.reset();
+        })
+        .catch((error) => {
+            showToast("Failed to send message.", "error");
+            console.error("EmailJS Error:", error);
+        });
 });
 </script>
 
