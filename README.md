@@ -2,13 +2,13 @@
 
 ## Overview
 
-A modern, fully-responsive personal portfolio website showcasing the professional work, skills, and projects of **Shehan Dilhara**, a Software Engineering undergraduate passionate about full-stack web development, AI, and innovative technology solutions.
+A modern, fully-responsive personal portfolio website showcasing the projects and technical skills of **Shehan Dilhara**, an Information Technology undergraduate at SLIIT interested in software development, Linux, DevOps, AI, and machine learning.
 
 ### Who It's For
 
 - **Target Audience:** Recruiters, hiring managers, and potential collaborators
-- **Developer Profile:** Information & Technology undergraduate specializing in Information and Technology
-- **Purpose:** Showcase technical expertise, academic projects, professional services, and facilitate networking/hiring opportunities
+- **Developer Profile:** BSc (Hons) Information Technology undergraduate at SLIIT
+- **Purpose:** Showcase technical skills, academic and personal projects, and professional background
 
 ---
 
@@ -20,7 +20,7 @@ A modern, fully-responsive personal portfolio website showcasing the professiona
 
 ## Features
 
-- ✨ **Animated Splash Screen** – Eye-catching intro with fade-in animation
+- 🔎 **SEO Metadata** – Page description, canonical URL, social-sharing metadata, and Person structured data
 - 🎯 **Smooth Navigation** – Single-page scrolling with anchor links and active state indicators
 - 🔄 **Tabbed Content** – Dynamic tabs for Skills, Experience, and Education sections
 - 📱 **Fully Responsive Design** – Mobile-optimized hamburger menu and fluid layouts
@@ -53,12 +53,14 @@ My-Portfolio/
 ├── index.html              # Main HTML document
 ├── style.css              # All styling (animations, layout, responsive)
 ├── README.md              # Project documentation
+├── robots.txt             # Search engine crawler instructions
+├── sitemap.xml            # Canonical indexable URL
 ├── images/
 │   ├── Icon.png           # Navigation logo
-│   ├── favicon.ico        # Browser tab icon
+│   ├── Icon.png           # Browser tab icon
 │   ├── Back.jpg           # Header background image
 │   ├── MBack.jpg          # Mobile background variant
-│   ├── aboutMe.jpg        # Profile picture
+│   ├── aboutMe.jpg        # Portfolio illustration
 │   ├── Shehan_Dilhara_CV.pdf  # Resume/CV
 │   ├── rag-personal-assistant.jpg
 │   ├── system-health-monitor.jpg
@@ -232,7 +234,7 @@ To customize, search and replace color values in `style.css`:
 ### Get in Touch
 
 - 📧 **Email:** [Gmail](dshehan588@gmail.com)
-- 💼 **LinkedIn:** [LinkedIn profile URL](https://www.linkedin.com/in/shehan-dilhara)
+- 💼 **LinkedIn:** [LinkedIn profile](https://www.linkedin.com/in/shehandilhara/)
 - 🐙 **GitHub:** [github.com/shehanD2004](https://github.com/shehanD2004)
 - 🌐 **Portfolio:** [This website](https://shehand2004.github.io/My-Portfolio/)
 
@@ -256,7 +258,7 @@ To customize, search and replace color values in `style.css`:
 ### Animations
 - Changing text rotates through different role descriptions
 - Cards and links have smooth hover effects
-- Fade-in splash screen on page load
+- Main page content is visible immediately without waiting for JavaScript
 
 *Note: All scripts are inline in `index.html` for simplicity*
 
@@ -291,7 +293,7 @@ To customize, search and replace color values in `style.css`:
 - [ ] Search functionality for projects
 - [ ] Testimonials/recommendations section
 - [ ] Integration with external portfolio APIs
-- [ ] SEO metadata optimization
+- [x] SEO metadata, canonical URL, structured data, robots.txt, and sitemap.xml
 - [ ] Analytics integration
 
 ---
@@ -305,14 +307,14 @@ MIT
 ## Author
 
 **Shehan Dilhara**  
-Information Technolology Undergraduate | Full Stack Developer | AI/ML Enthusiast
+Information Technology Undergraduate | Full-Stack Development | AI/ML Enthusiast
 
 ---
 
 ## Changelog
 
 - **v1.0** – Initial portfolio launch
-  - Splash screen animation
+  - Main page content is visible immediately
   - Multi-section layout (About, Services, Portfolio)
   - Responsive design
   - Dark theme with custom animations
@@ -328,5 +330,5 @@ For issues, questions, or improvements:
 
 ---
 
-**Last Updated:** June 2026  
+**Last Updated:** November 2026
 **Status:** Active & Maintained
