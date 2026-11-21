@@ -26,8 +26,8 @@ A modern, fully-responsive personal portfolio website showcasing the projects an
 - 📱 **Fully Responsive Design** – Mobile-optimized hamburger menu and fluid layouts
 - 🎨 **Modern Dark Theme** – Professional dark background with red accent colors (#ff004f, #b70505)
 - ⌨️ **Changing Text Animation** – Rotating text effect for dynamic role descriptions
-- 🎪 **Interactive Service Cards** – Hover effects with smooth transforms and background transitions
-- 🔗 **Project Showcase** – Portfolio section with project descriptions and direct GitHub links
+- 🎪 **Interactive Project Cards** – Project thumbnails and descriptions with smooth hover effects
+- 🔗 **Projects Navigation** – Header link scrolls directly to the Projects section
 - ⚡ **Smooth Scroll Behavior** – Native HTML scroll-behavior for seamless navigation
 - 🎭 **Icon Integration** – FontAwesome 6 icons for visual enhancement
 - 📄 **CV/Resume Access** – Quick access to downloadable CV
@@ -110,7 +110,7 @@ My-Portfolio/
 ## Usage
 
 ### Navigation
-- **Header** – Click nav links to jump to sections (Home, About, Services, Portfolio, Contact)
+- **Header** – Click nav links to jump to sections (About, Skills, Projects, Contact)
 - **Mobile Menu** – Toggle hamburger icon (☰) on smaller screens
 - **Smooth Scrolling** – All anchor links smoothly scroll to target sections
 
@@ -121,18 +121,10 @@ My-Portfolio/
 - Tabs highlight on click with animated underlines
 - Contains profile image and detailed professional summary
 
-#### My Services
-- **3 Service Cards** showcase main offerings:
-  - Web Development
-  - UI / UX Design
-  - App Development
-- Cards feature hover animations and icon indicators
-
-#### Portfolio / Projects
-- **4 Recent Projects** displayed with:
+#### Projects
+- **4 Projects** displayed with:
   - Project thumbnail images
   - Brief descriptions
-  - Direct links to GitHub repositories
 - Projects featured:
   1. **RAG Personal Assistant** – PDF indexing & AI Q&A system
   2. **System Health Monitor** – Python-based resource monitoring tool
@@ -155,14 +147,9 @@ My-Portfolio/
 3. **Profile Image** – Replace `images/aboutMe.jpg` with your photo
 4. **CV/Resume** – Replace `images/Shehan_Dilhara_CV.pdf` with your resume
 
-#### Modify Services
-- Edit service descriptions in the `#services` section
-- Change icons by updating FontAwesome class names
-- Adjust grid columns in CSS: `.services-list { grid-template-columns: ... }`
-
 #### Update Projects
-- Edit project details (title, description, image) in the `#portfolio` section
-- Update GitHub links: modify `href` in `<a>` tags
+- Edit project details (title, description, image) in the `#projects` section
+- Adjust project grid columns in CSS: `.projects-list { grid-template-columns: ... }`
 - Replace project images in `images/` folder
 
 #### Change Rotating Text
