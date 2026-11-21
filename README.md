@@ -30,7 +30,6 @@ A modern, fully-responsive personal portfolio website showcasing the projects an
 - 🔗 **Projects Navigation** – Header link scrolls directly to the Projects section
 - ⚡ **Smooth Scroll Behavior** – Native HTML scroll-behavior for seamless navigation
 - 🎭 **Icon Integration** – FontAwesome 6 icons for visual enhancement
-- 📄 **CV/Resume Access** – Quick access to downloadable CV
 
 ---
 
@@ -58,10 +57,8 @@ My-Portfolio/
 ├── images/
 │   ├── Icon.png           # Navigation logo
 │   ├── Icon.png           # Browser tab icon
-│   ├── Back.jpg           # Header background image
-│   ├── MBack.jpg          # Mobile background variant
+│   ├── Neon Hacker Lair Overlooking the City.png  # Header background image
 │   ├── aboutMe.jpg        # Portfolio illustration
-│   ├── Shehan_Dilhara_CV.pdf  # Resume/CV
 │   ├── rag-personal-assistant.jpg
 │   ├── system-health-monitor.jpg
 │   ├── yt-transcript-extractor.png
@@ -145,7 +142,6 @@ My-Portfolio/
 1. **Name/Title** – Edit `<h1>` and `<span>` text in the header section
 2. **About Text** – Modify content in `#about` section
 3. **Profile Image** – Replace `images/aboutMe.jpg` with your photo
-4. **CV/Resume** – Replace `images/Shehan_Dilhara_CV.pdf` with your resume
 
 #### Update Projects
 - Edit project details (title, description, image) in the `#projects` section
