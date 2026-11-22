@@ -750,6 +750,234 @@ body {
   pointer-events: auto;
 }
 
+/*--------cyberpunk loading screen----------*/
+.site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at center, rgba(110, 0, 20, 0.18), transparent 65%),
+    #050505;
+  animation: loader-exit 5.7s ease forwards;
+}
+.site-loader::before {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 23, 68, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 23, 68, 0.055) 1px, transparent 1px);
+  background-size: 45px 45px;
+  mask-image: radial-gradient(ellipse at center, #000 10%, transparent 80%);
+  content: "";
+  pointer-events: none;
+}
+.site-loader::after {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(255, 255, 255, 0.025) 4px
+  );
+  content: "";
+  pointer-events: none;
+}
+.loader-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(90%, 700px);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.loader-label {
+  margin: 0 0 18px;
+  color: #888;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.loader-label span {
+  color: #ff1744;
+}
+.loader-title {
+  position: relative;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(32px, 7vw, 68px);
+  font-weight: 900;
+  letter-spacing: 5px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 30px rgba(255, 23, 68, 0.2);
+  animation: loader-text-glitch 3s infinite;
+}
+.loader-title span {
+  color: #ff1744;
+  text-shadow:
+    0 0 10px rgba(255, 23, 68, 0.8),
+    0 0 30px rgba(255, 23, 68, 0.4);
+}
+.loader-title::before,
+.loader-title::after {
+  position: absolute;
+  inset: 0;
+  content: attr(data-text);
+  opacity: 0;
+  pointer-events: none;
+}
+.loader-title::before {
+  color: #ff1744;
+  animation: loader-glitch-red 4s infinite;
+}
+.loader-title::after {
+  color: #fff;
+  animation: loader-glitch-white 4s infinite;
+}
+.loader-subtitle {
+  margin: 20px 0 38px;
+  color: #777;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+.loader-progress {
+  position: relative;
+  width: min(100%, 370px);
+  height: 3px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+}
+.loader-progress-fill {
+  width: 0;
+  height: 100%;
+  background: #ff1744;
+  box-shadow:
+    0 0 10px #ff1744,
+    0 0 20px #ff1744;
+  animation: loader-progress 5.7s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+.loader-status {
+  display: flex;
+  width: min(100%, 370px);
+  align-items: center;
+  gap: 9px;
+  margin-top: 14px;
+  color: #777;
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+.loader-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff1744;
+  box-shadow: 0 0 10px #ff1744;
+  animation: loader-indicator-blink 1s infinite;
+}
+.loader-version {
+  margin-left: auto;
+  color: #ff1744;
+}
+.loader-corner {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-color: rgba(255, 23, 68, 0.65);
+  border-style: solid;
+}
+.loader-corner-tl {
+  top: 30px;
+  left: 30px;
+  border-width: 1px 0 0 1px;
+}
+.loader-corner-tr {
+  top: 30px;
+  right: 30px;
+  border-width: 1px 1px 0 0;
+}
+.loader-corner-bl {
+  bottom: 30px;
+  left: 30px;
+  border-width: 0 0 1px 1px;
+}
+.loader-corner-br {
+  right: 30px;
+  bottom: 30px;
+  border-width: 0 1px 1px 0;
+}
+@keyframes loader-progress {
+  0% { width: 0; }
+  30% { width: 35%; }
+  65% { width: 72%; }
+  100% { width: 100%; }
+}
+@keyframes loader-indicator-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+@keyframes loader-text-glitch {
+  0%, 92%, 100% { transform: translate(0); }
+  93% { transform: translate(-2px, 1px); }
+  95% { transform: translate(2px, -1px); }
+  97% { transform: translate(-1px, 0); }
+}
+@keyframes loader-glitch-red {
+  0%, 90%, 100% {
+    opacity: 0;
+    transform: translate(0);
+  }
+  92% {
+    opacity: 0.6;
+    transform: translate(-3px, 0);
+    clip-path: inset(20% 0 65% 0);
+  }
+  94% {
+    opacity: 0.5;
+    transform: translate(3px, 0);
+    clip-path: inset(60% 0 10% 0);
+  }
+  96% { opacity: 0; }
+}
+@keyframes loader-glitch-white {
+  0%, 90%, 100% {
+    opacity: 0;
+    transform: translate(0);
+  }
+  93% {
+    opacity: 0.4;
+    transform: translate(3px, 0);
+    clip-path: inset(45% 0 35% 0);
+  }
+  95% {
+    opacity: 0.3;
+    transform: translate(-3px, 0);
+    clip-path: inset(10% 0 75% 0);
+  }
+  97% { opacity: 0; }
+}
+@keyframes loader-exit {
+  0%, 87.72% {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
 /*------------------css for small screen-------------*/
 
 nav .fa-bars,
@@ -758,6 +986,38 @@ nav .fa-circle-xmark {
 }
 
 @media only screen and (max-width: 600px) {
+  .loader-title {
+    font-size: clamp(27px, 8vw, 42px);
+    letter-spacing: 2px;
+  }
+  .loader-label {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+  .loader-subtitle {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+  .loader-corner {
+    width: 20px;
+    height: 20px;
+  }
+  .loader-corner-tl {
+    top: 15px;
+    left: 15px;
+  }
+  .loader-corner-tr {
+    top: 15px;
+    right: 15px;
+  }
+  .loader-corner-bl {
+    bottom: 15px;
+    left: 15px;
+  }
+  .loader-corner-br {
+    right: 15px;
+    bottom: 15px;
+  }
   #header {
     background-image:
       linear-gradient(
@@ -941,6 +1201,21 @@ nav .fa-circle-xmark {
   }
   .footer-socials a {
     font-size: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-loader {
+    animation: loader-exit 5.7s steps(1, end) forwards;
+  }
+  .loader-progress-fill {
+    animation: loader-progress 5.7s linear forwards;
+  }
+  .loader-indicator,
+  .loader-title,
+  .loader-title::before,
+  .loader-title::after {
+    animation: none;
   }
 }
 /* Hide the default cursor */
