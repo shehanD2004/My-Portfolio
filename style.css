@@ -763,7 +763,7 @@ body {
   background:
     radial-gradient(ellipse at center, rgba(110, 0, 20, 0.18), transparent 65%),
     #050505;
-  animation: loader-exit 5.7s ease forwards;
+  animation: loader-exit 2s ease forwards;
 }
 .site-loader::before {
   position: absolute;
@@ -864,7 +864,7 @@ body {
   box-shadow:
     0 0 10px #ff1744,
     0 0 20px #ff1744;
-  animation: loader-progress 5.7s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation: loader-progress 2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 .loader-status {
   display: flex;
@@ -1206,10 +1206,10 @@ nav .fa-circle-xmark {
 
 @media (prefers-reduced-motion: reduce) {
   .site-loader {
-    animation: loader-exit 5.7s steps(1, end) forwards;
+    animation: loader-exit 2s steps(1, end) forwards;
   }
   .loader-progress-fill {
-    animation: loader-progress 5.7s linear forwards;
+    animation: loader-progress 2s linear forwards;
   }
   .loader-indicator,
   .loader-title,
