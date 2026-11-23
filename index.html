@@ -149,6 +149,7 @@
         </div>
       </div>
       <!-- --------about------- -->
+      <canvas id="ember-canvas" aria-hidden="true" hidden></canvas>
       <div id="about">
         <div class="container">
           <div class="row about-card">
@@ -560,6 +561,118 @@
 
       <script>
         emailjs.init("fRL0cV6W0rEWgm6kS");
+      </script>
+
+      <script>
+        (() => {
+          const canvas = document.getElementById("ember-canvas");
+          const context = canvas.getContext("2d");
+          const reducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)",
+          );
+          const particles = [];
+          let animationFrame;
+          let lastFrame = 0;
+          let width = 0;
+          let height = 0;
+          let pixelRatio = 1;
+
+          if (!context) return;
+
+          function resizeCanvas() {
+            pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = Math.round(width * pixelRatio);
+            canvas.height = Math.round(height * pixelRatio);
+            context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+            const particleCount = width < 600 ? 32 : 58;
+            while (particles.length < particleCount) {
+              particles.push(createParticle(true));
+            }
+            particles.length = particleCount;
+          }
+
+          function createParticle(randomHeight = false) {
+            return {
+              x: Math.random() * width,
+              y: randomHeight ? Math.random() * height : height + 12,
+              size: 1.2 + Math.random() * 2.8,
+              speed: 0.12 + Math.random() * 0.38,
+              drift: (Math.random() - 0.5) * 0.3,
+              phase: Math.random() * Math.PI * 2,
+              glow: 3 + Math.random() * 9,
+            };
+          }
+
+          function drawFrame(timestamp) {
+            if (document.hidden) {
+              animationFrame = undefined;
+              return;
+            }
+
+            const step = Math.min((timestamp - (lastFrame || timestamp)) / 16.67, 2);
+            lastFrame = timestamp;
+            context.clearRect(0, 0, width, height);
+
+            particles.forEach((particle) => {
+              particle.y -= particle.speed * step;
+              particle.x +=
+                (particle.drift + Math.sin(timestamp / 1600 + particle.phase) * 0.15) *
+                step;
+
+              if (particle.y < -12) {
+                Object.assign(particle, createParticle());
+              }
+              if (particle.x < -12) particle.x = width + 12;
+              if (particle.x > width + 12) particle.x = -12;
+
+              const flicker = 0.5 + Math.sin(timestamp / 180 + particle.phase) * 0.25;
+              context.save();
+              context.translate(particle.x, particle.y);
+              context.rotate(particle.phase + timestamp / 1400);
+              context.globalAlpha = flicker;
+              context.shadowColor = "#ff2a12";
+              context.shadowBlur = particle.glow;
+              context.fillStyle = particle.size > 2.6 ? "#ff4a1c" : "#ff9a42";
+              context.beginPath();
+              context.moveTo(0, -particle.size);
+              context.lineTo(particle.size * 0.65, 0);
+              context.lineTo(0, particle.size);
+              context.lineTo(-particle.size * 0.65, 0);
+              context.closePath();
+              context.fill();
+              context.restore();
+            });
+
+            animationFrame = window.requestAnimationFrame(drawFrame);
+          }
+
+          function updateEffect() {
+            const shouldShow = !reducedMotion.matches && !document.hidden;
+
+            canvas.hidden = !shouldShow;
+            if (shouldShow && animationFrame === undefined) {
+              lastFrame = 0;
+              animationFrame = window.requestAnimationFrame(drawFrame);
+            } else if (!shouldShow && animationFrame !== undefined) {
+              window.cancelAnimationFrame(animationFrame);
+              animationFrame = undefined;
+              context.clearRect(0, 0, width, height);
+            }
+          }
+
+          resizeCanvas();
+          window.addEventListener("resize", () => {
+            resizeCanvas();
+            updateEffect();
+          });
+          window.addEventListener("scroll", updateEffect, { passive: true });
+          document.addEventListener("visibilitychange", updateEffect);
+          reducedMotion.addEventListener("change", updateEffect);
+          updateEffect();
+        })();
       </script>
 
     </div>
