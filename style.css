@@ -547,6 +547,8 @@ body {
   text-align: center;
 }
 .contact-card {
+  position: relative;
+  z-index: 1;
   width: min(780px, 100%);
   margin: 0 auto;
   padding: 28px 44px 36px;
