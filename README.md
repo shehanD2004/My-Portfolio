@@ -2,7 +2,7 @@
 
 ## Overview
 
-A modern, fully-responsive personal portfolio website showcasing the projects and technical skills of **Shehan Dilhara**, an Information Technology undergraduate at SLIIT interested in software development, Linux, DevOps, AI, and machine learning.
+A modern, fully-responsive personal portfolio website showcasing the projects and technical skills of **Shehan Dilhara**, an Information Technology undergraduate at SLIIT interested in Software Development, Linux, DevOps, AI, and Machine Learning.
 
 ### Who It's For
 
@@ -14,7 +14,7 @@ A modern, fully-responsive personal portfolio website showcasing the projects an
 
 ## Live Site
 
-[Live Site](https://shehand2004.github.io/My-Portfolio/)
+[Live Site](https://shehand2004.github.io/shehandilhara.com/)
 
 ---
 
